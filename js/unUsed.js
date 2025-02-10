@@ -1,6 +1,6 @@
 const PurgeCSS = require('purgecss');
-const purgeCSS = new PurgeCSS({
-  content: ['about.html'],
+const unUsed = new PurgeCSS({
+  content: ['about.html','contact.html','services.html'],
   css: ['tooplate-clean-work.css'],
 });
-purgeCSS.purge().then(result => console.log(result));
+unUsed.purge().then(cleanCSS => console.log(cleanCSS));
